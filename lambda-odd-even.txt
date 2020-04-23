@@ -1,0 +1,14 @@
+interface OddEven {
+    String oddEven(int n);
+}
+public class Main
+{
+	public static void main(String[] args) {
+	    int n1=10;
+	    int n2=19;
+		OddEven s = (a)->a%2==0?"even":"odd";
+		
+		System.out.println(s.oddEven(n1));
+		System.out.println(s.oddEven(n2));
+	}
+}
