@@ -1,0 +1,23 @@
+interface Prime {
+    String prime(int n);
+}
+public class Main
+{
+	public static void main(String[] args) {
+	    int n1=10;
+	    int n2=19;
+	    int n3=2;
+	    Prime p = (a)->{ 
+	        if(a==2) return "prime";
+	        else {
+	        for(int i=2; i<=(int)Math.sqrt(a); i++)
+	            if(a%i==0) return "not prime";
+	        }
+	        return "prime";
+	    };
+		
+		System.out.println(p.prime(n1));
+		System.out.println(p.prime(n2));
+		System.out.println(p.prime(n3));
+	}
+}
