@@ -1,0 +1,22 @@
+interface Reverse {
+    String reverse(String s);
+}
+public class Main
+{
+	public static void main(String[] args) {
+	   String s1 = "hello world";
+	   String s2 = "cognizant";
+	   
+	   Reverse r=(s)->{
+	       String temp="";
+	       for(int i=s.length()-1; i>=0; i--) {
+	           temp+=s.charAt(i);
+	       }
+	       return temp;
+	   };
+		
+		System.out.println(r.reverse(s1));
+ 		System.out.println(r.reverse(s2));
+
+	}
+}
