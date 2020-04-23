@@ -26,6 +26,17 @@ public class Solution {
             }
             
         }
+        
+         for(int i=0; i<m; i++) {
+
+            if( adjList.containsKey(edges[i][1]-1) ) {
+                adjList.get(edges[i][1]-1).add(edges[i][0]-1);
+            }
+            else {
+                 Set<Integer> adjVertex = new HashSet<>();
+                 adjVertex.add(edges[i][0]-1);
+                 adjList.put( edges[i][1]-1, adjVertex);
+            }
 
         boolean []visited = new boolean[n]; 
         int []distance = new int[n];
